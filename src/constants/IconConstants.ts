@@ -1,0 +1,7 @@
+export enum IconConstants {
+  FEELS_LIKE = "FEELS_LIKE",
+  WIND = "WIND",
+  HUMIDITY = "HUMIDITY",
+  PRESSURE = "PRESSURE",
+  VISIBILITY = "VISIBILITY",
+}
