@@ -4,7 +4,7 @@ import React from "react";
 interface IScreenHeader {
   title: string;
   subtitle: string;
-  description: string;
+  description?: string;
 }
 
 export const ScreenHeader = (props: IScreenHeader): React.JSX.Element => {
@@ -14,7 +14,7 @@ export const ScreenHeader = (props: IScreenHeader): React.JSX.Element => {
     <View style={styles.header}>
       <Text style={styles.headerTitle}>{title}</Text>
       <Text style={styles.headerSubtitle}>{subtitle}</Text>
-      <Text style={styles.headerDescription}>{description}</Text>
+      {description ? <Text style={styles.headerDescription}>{description}</Text> : null}
     </View>
   );
 };
