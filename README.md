@@ -1,4 +1,4 @@
-# Lipiweather 👋
+# Lipiweather 🌧
 
 **Lipiweather App** is a simple react native app developed using Expo. Its purpose is to display the weather and its forecast from a specific city.
 
