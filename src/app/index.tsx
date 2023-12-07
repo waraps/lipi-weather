@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { Platform, StyleSheet, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 // components
@@ -22,7 +22,7 @@ export default function HomeScreen(): React.JSX.Element {
 
   return (
     <View style={styles.container}>
-      <ScreenHeader title={"Searcher"} subtitle={"Get weather updates"} />
+      <ScreenHeader title={Platform.OS !== 'web' ? undefined : "Searcher"} subtitle={"Get weather updates"} />
       <InputSearch value={address} onChangeText={setAddress} />
       <CityList data={data} />
       <StatusBar style="auto" />

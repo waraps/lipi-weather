@@ -2,7 +2,7 @@ import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 
 interface IScreenHeader {
-  title: string;
+  title?: string;
   subtitle: string;
   description?: string;
 }
@@ -12,7 +12,7 @@ export const ScreenHeader = (props: IScreenHeader): React.JSX.Element => {
 
   return (
     <View style={styles.header}>
-      <Text style={styles.headerTitle}>{title}</Text>
+      {title ? <Text style={styles.headerTitle}>{title}</Text> : null}
       <Text style={styles.headerSubtitle}>{subtitle}</Text>
       {description ? <Text style={styles.headerDescription}>{description}</Text> : null}
     </View>

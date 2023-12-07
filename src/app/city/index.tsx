@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, ScrollView } from "react-native";
+import { StyleSheet, Text, ScrollView, Platform } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { useLocalSearchParams } from "expo-router";
 
@@ -39,7 +39,7 @@ export default function CityScreen(): React.JSX.Element {
   return (
     <ScrollView style={styles.container}>
       <ScreenHeader
-        title={"Details"}
+        title={Platform.OS !== 'web' ? undefined : "Weather Details"}
         subtitle={name ?? ""}
         description={location}
       />
