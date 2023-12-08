@@ -1,2 +1,2 @@
-export * from "./formatUnixToDay";
-export * from "./getWeatheIcon";
+export * from './formatUnixToDay';
+export * from './getWeatheIcon';

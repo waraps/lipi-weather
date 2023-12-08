@@ -1,2 +1,2 @@
-export * from "./IPlaceRes";
-export * from "./IWeatherRes";
+export * from './IPlaceRes';
+export * from './IWeatherRes';

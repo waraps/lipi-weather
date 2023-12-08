@@ -1,36 +1,41 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended"
-    ],
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
+    'settings': {
+        'react': {
+            'version': 'detect'
         }
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
     },
-    "plugins": [
-        "@typescript-eslint",
-        "react"
+    'env': {
+        'browser': true,
+        'es2021': true,
+        'jest': true
+    },
+    'extends': [
+        'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
+        'prettier',
+        'plugin:@typescript-eslint/recommended'
     ],
-    "rules": {
+    'parser': '@typescript-eslint/parser',
+    'parserOptions': {
+        'ecmaFeatures': {
+            'jsx': true
+        },
+        'ecmaVersion': 'latest',
+        'sourceType': 'module'
+    },
+    'plugins': [
+        'react',
+        'react-hooks',
+        '@typescript-eslint',
+        'prettier'
+    ],
+    'rules': {
+        'indent': ['error', 4, { 'SwitchCase': 1 }],
+        'linebreak-style': ['error', 'unix'],
+        'quotes': ['error', 'single'],
+        'semi': ['error', 'always'],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 0,
+        'react-native/no-inline-styles': 0
     }
-}
+};
