@@ -1,4 +1,4 @@
-import { ICurrent, IDaily } from "../generics";
+import { ICurrent, IDaily } from '../generics';
 
 export interface IWeatherRes {
   lat: number;

@@ -1,6 +1,6 @@
-import { IFeelsLike } from "./IFeelsLike";
-import { ITemp } from "./ITemp";
-import { IWeather } from "./IWeather";
+import { IFeelsLike } from './IFeelsLike';
+import { ITemp } from './ITemp';
+import { IWeather } from './IWeather';
 
 export interface IDaily {
   dt: number;

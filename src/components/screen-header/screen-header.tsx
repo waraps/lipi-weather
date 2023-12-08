@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet } from 'react-native';
+import React from 'react';
 
 interface IScreenHeader {
   title?: string;
@@ -8,36 +8,36 @@ interface IScreenHeader {
 }
 
 export const ScreenHeader = (props: IScreenHeader): React.JSX.Element => {
-  const { title, subtitle, description } = props;
+    const { title, subtitle, description } = props;
 
-  return (
-    <View style={styles.header}>
-      {title ? <Text style={styles.headerTitle}>{title}</Text> : null}
-      <Text style={styles.headerSubtitle}>{subtitle}</Text>
-      {description ? <Text style={styles.headerDescription}>{description}</Text> : null}
-    </View>
-  );
+    return (
+        <View style={styles.header}>
+            {title ? <Text style={styles.headerTitle}>{title}</Text> : null}
+            <Text style={styles.headerSubtitle}>{subtitle}</Text>
+            {description ? <Text style={styles.headerDescription}>{description}</Text> : null}
+        </View>
+    );
 };
 
 const styles = StyleSheet.create({
-  header: {
-    justifyContent: "center",
-    alignItems: "center",
-    paddingVertical: 8,
-    marginBottom: 4,
-  },
-  headerTitle: {
-    fontSize: 18,
-    color: "#2D3748",
-    fontWeight: "bold",
-  },
-  headerSubtitle: {
-    fontSize: 16,
-    color: "#718096",
-    marginTop: -5,
-  },
-  headerDescription: {
-    fontSize: 14,
-    color: "#718096",
-  },
+    header: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingVertical: 8,
+        marginBottom: 4,
+    },
+    headerTitle: {
+        fontSize: 18,
+        color: '#2D3748',
+        fontWeight: 'bold',
+    },
+    headerSubtitle: {
+        fontSize: 16,
+        color: '#718096',
+        marginTop: -5,
+    },
+    headerDescription: {
+        fontSize: 14,
+        color: '#718096',
+    },
 });

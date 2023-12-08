@@ -1,1 +1,1 @@
-export * from "./IconConstants";
+export * from './IconConstants';
